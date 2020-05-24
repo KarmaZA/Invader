@@ -28,7 +28,7 @@ public class EnemyMove : MonoBehaviour
 
         LookDir.Normalize();
         MoveChar(LookDir);
-        Debug.Log(player.position);
+        //Debug.Log(player.position);
 
     }
 
