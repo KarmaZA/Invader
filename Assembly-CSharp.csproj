@@ -70,6 +70,7 @@
     <Compile Include="Assets\Scripts\Followplayer.cs" />
     <Compile Include="Assets\Scripts\Playermove.cs" />
     <Compile Include="Assets\Scripts\Shooting.cs" />
+    <Compile Include="Assets\Scripts\StartGame.cs" />
     <None Include="Assets\BayatGames\Free Platform Game Assets\Readme.txt" />
     <None Include="Assets\Robot Shooting Game\Read Me.txt" />
     <Reference Include="UnityEngine">
