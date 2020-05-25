@@ -24,8 +24,9 @@ public class EnemySpawn : MonoBehaviour
                 {
                 UnityEngine.Vector2 moSp;
                 moSp.x = cam.transform.position.x + xOffset;
-                moSp.y = Random.Range(-10, 10);
+                moSp.y = Random.Range(-5, 5);
                 GameObject enem = Instantiate(enemy, moSp, UnityEngine.Quaternion.identity);
+                enem.SetActive(true);
                 //Destroy(enem, 4f);
             }
            // LevelNumTrack.Level = LevelNumTrack.Level + 1;

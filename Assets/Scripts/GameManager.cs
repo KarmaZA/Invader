@@ -11,13 +11,13 @@ public class GameManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        enemyNum = 4;//LevelNumTrack.Level * 2;
+        enemyNum = 3;//LevelNumTrack.Level * 2;
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (enemiesKilled == enemyNum)
+        if ((enemiesKilled > enemyNum))// || (enemiesKilled == 2 && (FindObjectOfType<Enemy>() != null)))
         {
             int sceneNum = SceneManager.GetActiveScene().buildIndex;
             if(sceneNum == 2) // 2 because the are only 2 level so far

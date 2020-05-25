@@ -25,7 +25,7 @@ public class Playermove : MonoBehaviour
 
     void FixedUpdate()
     {
-        rb.MovePosition(rb.position + movement * Time.deltaTime);
+        rb.MovePosition(rb.position + movement * MoveSpeed * Time.deltaTime);
         rb.velocity = Vector2.zero;
 
         Vector2 lookDir = mousePos - rb.position;
