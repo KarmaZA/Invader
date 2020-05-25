@@ -13,18 +13,22 @@ public class EnemySpawn : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        InvokeRepeating("Spawn", 0f, 5f);
+        Invoke("Spawn", 2f);
     }
 
     void Spawn()
     {
         if (SpawnEnabled)
         {
-            UnityEngine.Vector2 moSp;
-            moSp.x = cam.transform.position.x + xOffset;
-            moSp.y = Random.Range(-10, 10);
-            GameObject enem = Instantiate(enemy, moSp, UnityEngine.Quaternion.identity);
-            Destroy(enem, 4f);
+            for (int x = 0; x < 2;x++)// (2 * LevelNumTrack.Level); x++)
+                {
+                UnityEngine.Vector2 moSp;
+                moSp.x = cam.transform.position.x + xOffset;
+                moSp.y = Random.Range(-10, 10);
+                GameObject enem = Instantiate(enemy, moSp, UnityEngine.Quaternion.identity);
+                //Destroy(enem, 4f);
+            }
+           // LevelNumTrack.Level = LevelNumTrack.Level + 1;
         }
     }
     

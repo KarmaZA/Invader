@@ -1,6 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
 
 public class Playermove : MonoBehaviour
@@ -13,10 +11,10 @@ public class Playermove : MonoBehaviour
 
     Vector2 movement;
     Vector2 mousePos;
-     void Update()
+    void Update()
     {
         movement.x = Input.GetAxisRaw("Horizontal");
-        movement.y =Input.GetAxisRaw("Vertical");
+        movement.y = Input.GetAxisRaw("Vertical");
 
         mousePos = cam.ScreenToWorldPoint(Input.mousePosition);
 
@@ -31,7 +29,7 @@ public class Playermove : MonoBehaviour
         rb.velocity = Vector2.zero;
 
         Vector2 lookDir = mousePos - rb.position;
-        float angle = Mathf.Atan2(lookDir.y, lookDir.x) * Mathf.Rad2Deg - 90f;
+        float angle = Mathf.Atan2(lookDir.y, lookDir.x) * Mathf.Rad2Deg;// - 90f;
         rb.SetRotation(angle);
     }
 }

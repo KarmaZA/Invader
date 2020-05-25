@@ -36,4 +36,9 @@ public class EnemyMove : MonoBehaviour
     {
         rb.MovePosition((Vector2)transform.position + (direction * moveSpeed * Time.fixedDeltaTime));
     }
+    
+    public void ShotDead()
+    {
+        Destroy(this, 0f);
+    }
 }

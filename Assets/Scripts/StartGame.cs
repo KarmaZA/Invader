@@ -21,6 +21,10 @@ public class StartGame : MonoBehaviour
     }
     void LoadNextLevel()
     {
+        //LevelNumTrack.Level = 1;
+        //Debug.Log(LevelNumTrack.Level);
         SceneManager.LoadScene(1);
+        
+        //Debug.Log(LevelNumTrack.Level);
     }
 }
