@@ -6,7 +6,7 @@ using UnityEngine.SceneManagement;
 public class GameManager : MonoBehaviour
 {
 
-    private float enemyNum;
+    private static float enemyNum = 2f;
     public float enemiesKilled = 0f;
     // Start is called before the first frame update
     void Start()
@@ -27,13 +27,15 @@ public class GameManager : MonoBehaviour
             {
                 sceneNum += 1;
             }
+
+            enemyNum += 2;
             SceneManager.LoadScene(sceneNum);
         }
     }
 
     public void KillEnemy()
     {
-        Debug.Log(enemiesKilled);
+        //Debug.Log(enemiesKilled);
         enemiesKilled += 1;
     }
 }

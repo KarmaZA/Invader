@@ -8,11 +8,14 @@ public class EnemySpawn : MonoBehaviour
     public GameObject enemy;
     public float xOffset = 5f;
     public Camera cam;
+    public static float EnemyNum;
 
     public bool SpawnEnabled = true;
     // Start is called before the first frame update
     void Start()
     {
+        EnemyNum += 2;
+        Debug.Log(EnemyNum + "here");
         Invoke("Spawn", 2f);
     }
 
@@ -20,7 +23,7 @@ public class EnemySpawn : MonoBehaviour
     {
         if (SpawnEnabled)
         {
-            for (int x = 0; x < 2;x++)// (2 * LevelNumTrack.Level); x++)
+            for (int x = 0; x < EnemyNum;x++)// (2 * LevelNumTrack.Level); x++)
                 {
                 UnityEngine.Vector2 moSp;
                 moSp.x = cam.transform.position.x + xOffset;
