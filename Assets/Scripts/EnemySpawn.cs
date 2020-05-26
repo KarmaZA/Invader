@@ -15,8 +15,8 @@ public class EnemySpawn : MonoBehaviour
     void Start()
     {
         EnemyNum += 2;
-        Debug.Log(EnemyNum + "here");
-        Invoke("Spawn", 2f);
+        //Debug.Log(EnemyNum + "here");
+        Invoke("Spawn", 0f);
     }
 
     void Spawn()

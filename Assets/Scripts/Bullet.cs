@@ -12,7 +12,7 @@ public class Bullet : MonoBehaviour
             GameObject effect = Instantiate(HitEffect, transform.position, Quaternion.identity);
             Destroy(effect, 1f);
             Destroy(gameObject);
-            Debug.Log(collision.gameObject.tag);
+            //Debug.Log(collision.gameObject.tag);
         }
         
 

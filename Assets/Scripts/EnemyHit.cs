@@ -11,7 +11,7 @@ public class EnemyHit : MonoBehaviour
             Destroy(this, 0f);
             collisionInfo.collider.gameObject.SetActive(false);// = false;
             FindObjectOfType<GameManager>().KillEnemy();
-            Debug.Log("dead");
+            //Debug.Log("dead");
         }
 
     }
