@@ -8,18 +8,25 @@ public class EnemyMove : MonoBehaviour
     public Transform player;
     public Vector2 LookDir;
     public Rigidbody2D rb;
-    public float moveSpeed = 5f;
+    public static float moveSpeed = 5f;
+    //public bool
+
+    private void Start()
+    {
+        moveSpeed += 0.04f;
+    }
 
     void Update()
     {
         rb = this.GetComponent<Rigidbody2D>();
         // Vector2 LookDir;
 
-        LookDir.x = player.position.x - rb.position.x;
-        LookDir.y = player.position.y - rb.position.y;
 
-       /* float angle = Mathf.Atan2(LookDir.y, LookDir.x) * Mathf.Rad2Deg; //+ 90f;
-        rb.rotation = angle;*/
+        LookDir.x = player.position.x - rb.position.x;// -0.5f;
+        LookDir.y = player.position.y - rb.position.y;// -0.5f;
+
+        float angle = Mathf.Atan2(LookDir.y, LookDir.x) * Mathf.Rad2Deg + 180f;
+        rb.rotation = angle;
     }
     private void FixedUpdate()
     {
@@ -33,8 +40,9 @@ public class EnemyMove : MonoBehaviour
     }
 
     void MoveChar(Vector2 direction)
-    {
+    {   
         rb.MovePosition((Vector2)transform.position + (direction * moveSpeed * Time.fixedDeltaTime));
+
     }
     
     public void ShotDead()
