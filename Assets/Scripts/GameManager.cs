@@ -48,6 +48,7 @@ public class GameManager : MonoBehaviour
         //Debug.Log(enemiesKilled);
         enemiesKilled += 1;
         text.text = "Score : " + enemiesKilled;
+        
     }
 
     public void GameOver()
