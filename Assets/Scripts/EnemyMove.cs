@@ -13,7 +13,7 @@ public class EnemyMove : MonoBehaviour
 
     private void Start()
     {
-        moveSpeed += 0.04f;
+        moveSpeed += 0.01f;
     }
 
     void Update()
